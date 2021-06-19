@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <div id='container'>
+    
+        <form action="">
+        
+            <p>
+                Binary:  
+                <input type="number" id="b-input" placeholder='Enter a binary number' name="Binary" onchange='binConvert()' >
+            </p> 
+            
+            <p>
+                Decimal:
+                <input type="number" id="d-output" name="Decimal" readonly >
+            </p>
+        <div id = 'convertBtn'>    
+            <p>
+            <input type="button" value="CONVERT" onclick='binConvert()'>
+        </div>        
+            </p>
+
+        </form>
+
+    </div>
+    
+</body>
+
+<script>
+
+    function binConvert() {
+            
+        const binary = document.getElementById('b-input').value;
+
+        if(binary === '') return alert('Please enter a binary number.');
+        
+        binary.split('').map((char) => {
+            
+            if (char != 0 && char != 1 ) {
+                      
+            return alert('Please enter a 1 or a 0.');
+
+            }
+        });
+
+        const decimal = parseInt(binary, 2);
+
+        document.getElementById('d-output').value = decimal;
+
+        return true;
+    }
+
+</script>
+
+</html>

@@ -1,0 +1,33 @@
+#container {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+}
+
+input {
+    border-radius: 50px;
+    padding: 12px;
+}
+
+#convertBtn {
+        
+    display: flex;
+    justify-content: center;
+
+}
+
+body {
+    font-family: 'Varela Round', sans-serif;
+    font-size: 1.5em;
+    background-color: peachpuff;
+}
+
+input[type='button'] {
+    
+    background-color: green;
+    color: ivory;
+    font-weight: bold;
+}
